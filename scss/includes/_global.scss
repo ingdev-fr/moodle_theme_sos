@@ -581,7 +581,7 @@ p {
         border-color: transparent !important;
         color: $gray-50 !important;
         outline: 0;
-        box-shadow: 0 0 0 .25rem rgb(76 44 105 / .75);
+        box-shadow: 0 0 0 .25rem rgba(44, 60, 105, 0.75);
     }
 }
 
@@ -613,7 +613,7 @@ p {
         background-color: $pink-700 !important;
         border-color: transparent !important;
         outline: 0;
-        box-shadow: 0 0 0 .25rem rgb(76 44 105 / .75);
+        box-shadow: 0 0 0 .25rem rgba(44, 60, 105, 0.75);
         color: $gray-50 !important;
     }
     &:hover {
@@ -630,14 +630,14 @@ p {
     border-color: $gray-200 !important;
     color: black;
     &:focus {
-        background-color: $lime-200 !important;
+        background-color: $primary-200 !important;
         border-color: transparent !important;
         outline: 0;
-        box-shadow: 0 0 0 .25rem rgb(76 44 105 / .75);
+        box-shadow: 0 0 0 .25rem rgba(44, 60, 105, 0.75);
         color: black !important;
     }
     &:hover {
-        background-color: $lime-200 !important;
+        background-color: $primary-200 !important;
         border-color: transparent !important;
         outline: none !important;
         color: black !important;
@@ -671,7 +671,7 @@ p {
         background-color: $primary-400!important;
         border-color: transparent !important;
         outline: 0;
-        box-shadow: 0 0 0 .25rem rgba(44, 65, 105, 0.75);
+        box-shadow: 0 0 0 .25rem rgba(44, 60, 105, 0.75);
         color: $gray-50!important;
     }
     &:hover {
@@ -693,7 +693,7 @@ p {
     &:focus {
         background-color: $primary-950 !important;
         outline: 0;
-        box-shadow: 0 0 0 .25rem rgb(76 44 105 / .75);
+        box-shadow: 0 0 0 .25rem rgba(44, 60, 105, 0.75);
     }
 }
 

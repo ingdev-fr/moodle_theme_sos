@@ -26,19 +26,19 @@
             padding: 8px !important;
             margin-top: 10px !important;
             margin-bottom: 8px !important;
-            background-color: $pink-600 !important;
-            border-color: $pink-600 !important;
+            background-color: $secondary !important;
+            border-color: $secondary !important;
             color: $gray-50 !important;
             border-radius: 8px;
             &:focus {
-                background-color: $pink-700 !important;
+                background-color: $primary-800 !important;
                 border-color: transparent !important;
                 outline: 0;
-                box-shadow: 0 0 0 .25rem rgb(76 44 105 / .75);
+                box-shadow: 0 0 0 .25rem rgba(44, 60, 105, 0.75);
                 color: $gray-50 !important;
             }
             &:hover {
-                background-color: $pink-700 !important;
+                background-color: $primary-800 !important;
                 border-color: transparent !important;
                 outline: none !important;
                 color: $gray-50 !important;
