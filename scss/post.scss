@@ -3,9 +3,7 @@
  * Add your SCSS code here.
  * It will be added on top of Boost Union's SCSS code.
  ***************************************************************/
-@import "includes/variables";
 @import "includes/global";
-@import "includes/btn";
 @import "includes/calques";
 @import "includes/boost_union";
 @import "includes/navbar";
@@ -21,6 +19,7 @@
 @import "includes/course_sections";
 @import "includes/course_activities";
 @import "includes/course_index";
+@import "includes/course_rating";
 @import "includes/my_progress";
 @import "includes/questions";
 @import "includes/scorm";
