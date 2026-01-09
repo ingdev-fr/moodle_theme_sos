@@ -1,0 +1,132 @@
+/* On passe le background du body d'un H5P en blanc */
+.h5p-iframe body {
+    background: white;
+}
+
+/* On passe le form d'édition à 100% en plein ecran */
+.h5peditor-form.h5peditor-form-manager>.tree {
+    max-width: 100%;
+}
+
+/* Largeur max d'une activité H5P */
+.h5p-content {
+    max-width: 1200px !important;
+    margin: auto;
+    font-family: 'Inter', Sans-Serif !important;
+    font-size: 1.2rem !important;
+}
+
+/* Stylage des titres H5P */
+h2:not(.navigation-title) {
+    display: block;
+    padding: 12px;
+    border-radius: 5px;
+    background: #475475;
+    color: white;
+}
+
+h3 {
+    display: block;
+    padding: 12px;
+    padding-left : 35px;
+    border-radius: 5px;
+    background: #dddefd;
+    color: #4C2C69;
+}
+
+/* marge haute des H5P en SCORM */
+.h5p-interactive-book-content .h5p-column-content:first-child {
+    margin-top : 25px;
+}
+
+/* Slide H5P */
+.h5p-course-presentation .h5p-box-wrapper {
+    box-shadow: none;
+}
+
+.h5p-column {
+}
+
+/* Images H5P column */
+.h5p-column-content img {
+    margin: auto;
+    margin-bottom: 40px;
+}
+
+/* Image de couverture */
+.h5p-column-content img[alt="couverture formation"] {
+    width: 100% !important;
+}
+
+/* H5P Question dans un quiz set */
+.question-container, .h5p-dialogcards {
+    padding: 20px 15px;
+}
+
+/* H5P Vidéo */
+.h5p-video {
+    margin-bottom : 30px;
+    margin-top : 30px;
+    display: flex;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.h5p-accordion h2 {
+     background: white;
+     color: black;
+}
+
+.h5p-interactive-book-chapter {
+    padding-top: 30px;
+}
+
+.h5p-interactive-book-chapter div {
+    max-width: 100% !important;
+}
+
+/* H5P titres dans Sommaire + pas tronqués */
+.h5p-interactive-book-navigation-chapter-title-text {
+    font-size: 1.2rem !important;
+}
+
+/* H5P titres dans Sommaire + pas tronqués */
+.h5p-interactive-book-navigation-section-title {
+    overflow: visible !important;
+    text-overflow: unset !important;
+    white-space: wrap !important;
+    margin-right: 0 !important;
+    text-align: left !important;
+}
+
+/* Titre des sections du sommaire d'un livre */
+.h5p-interactive-book-navigation-section-title {
+    font-size: 1.1rem !important; 
+}
+
+/* Stylage de la navigation du livre interactif */
+.h5p-interactive-book-navigation {
+    max-width: 24em !important;
+    width: 24em !important;
+}
+.h5p-interactive-book-navigation-chapter-button {
+    height: initial !important;
+    padding: 1.125em !important;
+}
+.h5p-interactive-book-navigation>div {
+    overflow: initial !important;
+    text-overflow: initial !important;
+    white-space: initial !important;
+}
+
+.h5p-advanced-text ul {
+    list-style-type: square !important;
+}
+
+/* Stylage de l'essay */
+.h5p-question-introduction, .h5p-essay-solution-title {background-color: #8d8bf8; color: white; padding: 5px; padding-left: 10px; border-radius: 5px;}
+.h5p-question-introduction {padding-top: 20px; padding-bottom: 20px;}
+
+/* Stylage fill in the blank */
+.h5p-input-wrapper {margin-right: 5px;}

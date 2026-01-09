@@ -1,0 +1,326 @@
+// La page du format de cours
+.format-tiles {
+     // Par défaut, les titres sont strong, on va les minimiser
+     h3 strong, h4 strong, h5 strong, h6 strong {
+          font-weight: 600 !important;
+     }
+     #format-tiles-multi-section-page {
+          max-width: 100% !important;
+     }
+
+     // On fait disparaitre les breadcrumbs
+     #page-navbar {
+          display: none !important;
+     }
+     
+     // Le header de la page de cours
+     .page-header-headings {
+          // On supprime la barre colorée sous le titre
+          h1 {
+               font-size: 1.6rem !important;
+               &::after {
+                    display: none !important;
+               }    
+          }
+     }
+     // Le content de la page du cours
+     #page-content {
+          max-width: 1600px !important;
+          margin: auto !important;
+          padding-top: 10px !important;
+     }
+     // Les boutons de navigation dans le header du cours 
+     #course-header {
+          .single-section {
+               top: 66px !important;
+          }
+          .sectionbutton {
+               width: 40px !important;
+               height: 40px !important;
+               border: 0 !important;
+               &:hover {
+                    background-color: $primary-300;
+               }
+               &:focus {
+                    background-color: $primary-300;
+               }
+               .icon {
+                    font-size: 1.2rem !important;
+               }
+          }
+     }
+
+     // La div avec les boutons de navigation du cours
+     #format-tiles-course-header {
+          position: absolute;
+          top: 55px;
+          right: 80px;
+     }
+
+     // Contenu du cours list des sections et activités
+     .course-content {
+          // Les tuiles de section et d'activité
+          ul.tiles {
+               & .tile,
+               & .tile.phototile.tilestyle-2 .photo-tile-text h3 {
+                    border-radius: 5px !important;
+               }
+               .tile.tilestyle-1,
+               .tile.tilestyle-2 {
+                    border-radius: 5px !important;
+               }
+               .tile.phototile.tilestyle-2 .photo-tile-text h3 {
+                    border-radius: 0 0 5px 5px !important;
+               }
+          }
+     }
+
+     // DIv au dessus des tuiles de la page principale
+     #abovetiles {
+          justify-content: start !important;
+          margin-bottom: 20px !important;
+          #tiles-overall-progress-outer {
+               margin-left: 0 !important;
+               width: 100% !important;
+               display: block !important;
+          }
+          // Barre de progression de la page principale du cours 
+          .overall-progress {
+               color: $secondary-950 !important;
+          }
+          // Hauteur de la barre d'avancement du cours
+          .progress {
+               height: 20px;
+          }
+     }
+
+     // Section 0
+     #section-zero-container {
+          // Comme on utilise pas les options utilisateurs de la section 0 (les boutons n'aparaissent plus), on repasse le contenu de la section à full width
+          .col-sm-11:first-child {
+               max-width: 100% !important;
+               flex: 0 0 100% !important;
+          }
+          #section-0 {
+               // On cache le titre de la section 0 
+               h3:first-of-type  {
+                    display: none !important;
+               }
+          }
+     }
+     
+     // SOus-sections 
+     .activity.subsection {
+          border: none !important;
+          background: initial !important;
+          margin-bottom: 30px !important;
+          padding-top: 0 !important;
+          margin-top: 30px !important;
+          cursor: default !important;
+          .tiles-subsection-content .sectionname {
+               cursor: default !important;
+          }
+          .activity-item {
+               border-radius: 5px !important;
+               cursor: default !important;
+          }
+          .activity-grid {
+               padding-top: 15px !important;
+               padding-bottom: 15px !important;
+          }
+          .section-item {
+               background: transparent !important;
+          }
+          .sectionname {
+               margin-left: 8px !important;
+          }
+          .section .activity-item {
+               border-left: none !important;
+          }
+          h3 {
+               font-size: 1.5rem !important;
+          }
+     }
+
+     // La section qui s'ouvre en popoup quand animation activée
+     .moveablesection {
+          max-width: 100% !important;
+     }
+
+     // Activité sous forme non tuiles
+     .activity.activity-wrapper {
+          border-radius: 5px;
+          border: 2px solid $secondary-50 !important;
+          border-left: 3px solid $secondary-300 !important;
+          margin-bottom: 20px !important;
+          background: $secondary-50;
+          // La description des activités est trop petite à lire quand format tiles est actif, on augmente la font size
+          .activityname a {
+               font-size: 1.4rem !important;
+               font-weight: 600 !important;
+          }
+     }
+
+     // Activité sous forme de tuile
+     .activity.subtile {
+          background: $slate-100 !important;
+          width: 100% !important;
+          max-width: 33% !important;
+          height: auto !important;
+          min-height: 170px !important;
+          &.spacer {
+               display: none !important;
+          }
+          // Nom de l'activité
+          .activityname {
+               position: initial !important;
+               padding-top: 0 !important;
+               border-bottom-right-radius: 0px !important; 
+               border-bottom-left-radius: 0px !important;
+               h5 {
+                    padding-top: 8px !important;
+                    padding-bottom: 5px !important;
+                    font-weight: 600 !important;
+               }
+          }
+          // Infos de l'activité (restreinte, cachées ...)
+          .contentafterlink {
+               position: initial !important;
+               background-color: #fff !important;
+               border-radius: 0 0 8px 8px !important;
+          }
+          .availabilityinfo {
+               position: initial !important;
+          }
+          // Le container de l'icone de l'activité 
+          .tileiconcontainer {
+               height: 70px !important;
+               width: 70px !important;
+               max-height: 70px !important;
+               max-width: 70px !important;
+               border: none !important;
+               background: transparent !important;
+               margin-top: 10px !important;
+          }
+     }
+     // Les boutons du modal d'ouverture des activités (page, pdf, ... de Tiles)
+     .embed-module-buttons {
+          a .icon {
+               color: $gray-50 !important;
+               &:hover {
+                    color: $pink-100 !important;
+               }
+          }
+          button.btn-close {
+               background-color: $gray-50 !important; // fond blanc
+               opacity: 1 !important; // bien visible
+               &:hover {
+                    background-color: $pink-100 !important;
+               }
+          }
+     }
+}
+
+// La page du format de cours quand on édite
+#page-course-view-tiles.editing,
+#page-course-view-section-tiles.editing
+ {
+     // Le content de la page du cours
+     #page-content {
+          div[role=main] {
+               max-width: 1500px !important;
+          }
+     }
+     // La div avec les boutons de navigation du cours
+     #format-tiles-course-header {
+          position: initial !important;
+     }
+}
+
+@media (max-width: 1359px) {
+     .format-tiles {
+          // La liste des activités et les activités 
+          .course-content ul li.section {
+               // l'activité sous forme de tuile
+               .subtile {
+                    max-width: 50% !important;
+               }
+          }
+     }
+}
+
+@media (max-width: 991px) {
+     .format-tiles {
+          #section-0 {
+               margin-top: 0 !important;
+          }
+          // On cache les boutons de navigation
+          #course-header {
+               display: none;
+          }
+          // La liste des activités et les activités 
+          .course-content ul li.section {
+               &.main:not(.delegated-section) {
+                    width: 100% !important;
+               }
+               ul.format-tiles-cm-list {
+                    padding-inline-start: 0px !important;
+               }
+               // l'activité sous forme de tuile
+               .subtile {
+                    max-width: 50% !important;
+               }
+          }
+          // Le header de la page de cours
+          .page-header-headings {
+               // On supprime la barre colorée sous le titre
+               h1 {
+                    font-size: 1.2rem !important;   
+               }
+          }
+          // Le content de la page du cours
+          #page-content {
+               div[role=main] {
+                    margin-left: 30px !important;
+                    margin-right: 30px !important;
+               }
+          }
+     }
+}
+
+@media (max-width: 767px) {
+     .format-tiles {
+          // Le content de la page du cours
+          #page-content {
+               padding-top: 0 !important;
+               div[role=main] {
+                    margin-left: 5px !important;
+                    margin-right: 5px !important;
+               }
+          }
+          // Navigation secondaire 
+          .secondary-navigation {
+               padding-bottom: 0 !important;
+          }
+          // Bouton d'activité
+          .activity-item .activity-completion button {
+               margin-top: 10px !important;
+               margin-bottom: 10px !important;
+          }
+          // La liste des activités et les activités 
+          .course-content ul li.section {
+               &.main:not(.delegated-section) {
+                    width: 100% !important;
+               }
+               ul.format-tiles-cm-list {
+                    padding-inline-start: 0px !important;
+               }
+               // l'activité sus forme de tuile
+               .subtile {
+                    margin-bottom: 12px !important;
+                    flex-basis: auto !important;
+                    max-width: 100% !important;
+               }
+          }
+     }
+}

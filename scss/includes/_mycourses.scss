@@ -1,0 +1,142 @@
+.pagelayout-mycourses {
+    #page-content {
+    div[role=main] {
+        padding-top: 0 !important;
+    }
+}
+    // Suppression de la margin top pour le contenu de la page 
+    & #page.drawers .main-inner {
+        margin-top: 0;
+    }
+    .block_myoverview {
+        padding-top: 0 !important;
+        .block-cards {
+            border-top: 0 !important;
+        }
+        & .course-card {
+            box-shadow: $box-shadow;
+            transition: transform 0.2s ease;
+            &:hover {
+                transform: translate(3px, -3px);
+            }
+            .card-body {
+                background: $blue-50;
+                a {
+                    font-weight: 600;
+                    &:hover {
+                        color: $primary-500;
+                    }
+                    &:focus {
+                        color: $primary-500;
+                    }
+                }
+                .text-muted span.text-truncate {
+                    padding: 3px 8px;
+                    background: $slate-700;
+                    border-radius: 8px;
+                    margin-top: 8px;
+                    font-weight: 500;
+                    color: $gray-50;
+                    font-size: 12px;
+                    margin-bottom: 5px;
+                }
+            }
+            .card-footer .progress-text {
+                color: $green-600;
+                font-weight: 600;
+            }
+        }
+        & .card-text {
+            margin-top: 0 !important;
+        }
+
+    }
+    #page-content {
+        div[role=main] {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            & span {
+                min-height: 0px !important;
+                height: auto !important;
+            }
+            & .card-header {
+                border-radius: 0;
+                text-align: center !important;
+            }
+            & .card-body {
+                padding: 1rem 10rem !important;
+            }
+            & .paged-content-page-container {
+                & .card-body {
+                    padding: 18px !important;
+                }
+            }
+        }
+    }
+
+    & .block {
+        padding: 15px 0;
+        // On style les liens du footer des blocks sauf le lien vers l'export calendrier
+        .footer a:not([href="http://localhost/calendar/managesubscriptions.php"]) {
+            display: block !important;
+            width: fit-content;
+            padding: 8px !important;
+            margin-top: 4px !important;
+            margin-bottom: 4px !important;
+            background: $lime-950;
+            color: $gray-50;
+            border-radius: 8px;
+        }
+    
+        // On supprime le point de l'after par un espace
+        .bottom span.footer-link:after {
+            content: " " !important;
+        }
+    }
+    & .timeline-event-list-item {
+        background: $lime-100;
+        border-radius: 8px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .pagelayout-mycourses {
+        #page-content {
+            div[role=main] {
+                & .card-body {
+                    padding: 1rem 20rem !important;
+                }
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1599px) {
+    .pagelayout-mycourses {
+        #topofscroll {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .pagelayout-mycourses {
+        #page-content {
+            div[role=main] {
+                & .card-body {
+                    padding: 1rem !important;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .pagelayout-mycourses {
+        #page-header {
+            padding: 10px 20px;
+        }
+    }
+}

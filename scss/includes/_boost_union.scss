@@ -1,0 +1,16 @@
+// Restyle du thème boost_union
+
+// Style des liens et dropdowns du menu intelligent
+.boost-union-smartmenu {
+    .dropdown-toggle {
+        &:focus {
+            box-shadow: none;
+            background: $primary !important;
+            color: $gray-50 !important;
+        }
+    }
+    .dropdown-menu {
+        margin-top: 10px !important;
+    }
+
+}

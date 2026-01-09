@@ -1,0 +1,110 @@
+// Stylage des liens du user (avec dropdowns) dans la navigation primaire
+#usernavigation {
+  height: 40px !important;
+  border-radius: 5px;
+  padding-bottom: 2px;
+  margin-left: initial !important;
+  & .icon {
+    color: $primary-500;
+    &:hover {
+      color: $primary-600;
+    }
+  }
+  & .nav-link {
+    &:focus {
+      outline: none !important;
+      box-shadow: none !important;
+      color: $lime-700;
+    }
+    &::before {
+      display: none;
+    }
+  }
+  & .usermenu {
+    a {
+      outline: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      &.show {
+      border: 1px solid $lime-500 !important;
+      border-radius: 8px;
+    }
+    }
+    .dropdown-menu {
+      top: 42px;
+    }
+  }
+  & .userinitials {
+    background: $primary !important;
+    height: 32px;
+    width: 32px;
+    color: white;
+    &:hover {
+      background: $secondary !important;
+    }
+  }
+  & #user-menu-toggle::after {
+    color: $lime-950;
+  }
+  // Le container des notifications
+  .popover-region-container {
+    top: 45px;
+    border-radius: 8px;
+    box-shadow: $box-shadow;
+    padding: 8px;
+    
+  }
+  .popover-region-header-container {
+    height: 32px;
+  }
+  .popover-region-content-container {
+    .content-item-container {
+      padding: 4px 10px 12px 10px !important;
+    }
+  }
+  .popover-region-footer-container {
+    border-radius: 0 0 8px 8px;
+  }
+  .content-item-container.unread {
+    background-color: $violet-100 !important;
+    &:hover {
+      background-color: $primary-600 !important;
+    }
+  }
+}
+
+// Le drawer des messages dans la navbar 
+[data-region=right-hand-drawer].drawer {
+  z-index: 1021;
+  position: fixed;
+  top: 50%;
+  right: unset;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 80vh;
+  min-width: 50%;
+  box-shadow: $box-shadow;
+  padding: 8px;
+  opacity: 1;
+  border-radius: 8px;
+  padding-top: 8px !important;
+}
+
+/**************  MEDIA QUERIES  ************/
+
+@media (max-width: 1199px) {
+  [data-region=right-hand-drawer].drawer {
+    min-width: 75%;
+  }
+}
+
+
+@media (max-width: 967px) {
+  // On cache le label du switch du menu user
+  #usernavigation {
+    .editmode-switch-form label {
+      display: none;
+    }
+  }
+}
+

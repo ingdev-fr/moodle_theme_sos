@@ -1,0 +1,24 @@
+.modal-content {
+    & .modal-header {
+        background-color: $primary-900;
+    }
+    & .modal-title {
+        color: $gray-50 !important;
+    }
+    & .btn-close {
+        background-color: $gray-50 !important; // fond blanc
+        opacity: 1 !important; // bien visible
+        &:hover {
+            background-color: $pink-100 !important;
+        }
+        span {
+            color: white !important;
+        }
+    }
+}
+
+div[role="alertdialog"] .modal-content {
+    & .modal-header {
+        background-color: initial !important;
+    }
+}

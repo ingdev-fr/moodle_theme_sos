@@ -1,0 +1,124 @@
+/****************** Page de login *******************/
+
+// Changement de l'image du background de la page de login 
+#page-login-index #page,
+#page-login-signup #page,
+#page-login-forgot_password #page {
+        background-image: url([[pix:theme|login-page]]) !important;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 0 !important;
+        color: $gray-50;
+        // Main
+        #page-content div[role=main] {
+            padding-left: 0px !important;
+            padding-right: 0px !important;
+            padding-bottom: 0px !important;
+        }
+        & p {
+            color: $gray-50 !important;
+        }
+        #notice p {
+            color: $primary-950 !important;
+        }
+        .login-wrapper {
+            margin-left: 15px;
+            margin-right: 15px;
+        }
+        // Changement du background du container du form de login
+        .login-container {
+            background: $linear-login;
+            margin-top: 15px;
+            width: 100%;
+            padding: 1rem !important;
+            h1 {
+                text-align: center;
+            }
+        }
+
+        label, 
+        .form-control-static,
+        .fdescription,
+        form h3  {
+            color: $gray-50 !important;
+        }
+
+        .login-instructions {
+            color: $gray-50;
+        }
+
+        // Changement de couleur du lien d'oubli de mot de passe 
+        .login-form-forgotpassword a {
+            color: $lime-100;
+        }
+
+        // Changement de couleur du menu des langues du login container 
+        .login-languagemenu .dropdown {
+            a {
+                color: $gray-50;
+            }
+        }
+
+        // On supprime le menu des langues du container de login, qui n'affiche pas le dropdown ! 
+        .login-languagemenu, .divider { 
+           display: none;
+        }
+
+        // Changement de couleur du titre du login
+        .login-heading {
+            color: $gray-50;
+        }
+        .invalid-feedback {
+            color: $red-400;
+        }
+}
+
+#page-login-signup #page {
+    & a:not(.btn-icon) {
+        color: $lime-100;
+    }
+    #notice {
+        padding: 10px 20px !important;
+    }
+    #id_policyagreement h3 {
+        font-size: 1.2rem !important;
+    }
+}
+
+// STyle pour tablettes
+@media (max-width: 1199px) {
+    #page-login-index #page,
+    #page-login-signup #page  {
+        background-image: url([[pix:theme|login-page-tab]]) !important;
+    }
+}
+
+// Stylage du container du logo (quand logo couleur sombre)
+.login-logo {
+    padding: 10px;
+    background: $gray-50;
+    border-radius: 5px;
+    & img {
+        max-height: 52px;
+    }
+}
+
+// STyle pour tablettes
+@media (max-width: 1199px) {
+    #page-login-forgot_password #page {
+        background-image: url([[pix:theme|login-page-tab]]) !important;
+    }
+}
+
+// STyle pour tablettes
+@media (max-width: 767px) {
+    #page-login-index #page,
+    #page-login-signup #page,
+    #page-login-forgot_password #page {
+        margin-top: 0 !important;
+        #page-wrapper #page {
+            flex-direction: row;
+        }
+    }
+}

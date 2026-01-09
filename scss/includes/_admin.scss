@@ -1,0 +1,57 @@
+.pagelayout-admin {
+    // Stylage des blocs de catégories
+    & .card-header {
+        background: $slate-700 !important;
+        font-weight: 600;
+        font-size: 1.2rem !important;
+        color: $gray-50 !important;
+        padding: 15px !important;
+    }
+    & .action-menu .dropdown-toggle {
+        background-color: $gray-200 !important;
+        padding: 6px 8px;
+        border-radius: 8px;
+        margin-left: 6px;
+        border-color: $gray-200 !important;
+        color: initial;
+        &:hover {
+            background-color: $primary-950 !important;
+            border-color: transparent !important;
+            color: $gray-50;
+            outline: none !important;
+        }
+        &:active {
+            color: $primary-950 !important;
+        }
+    }
+
+}
+
+// Stylage de la page de gestion des cours et catégories
+#page-course-management {
+    & #page-content h2 {
+        display: none;
+    }
+}
+
+// Stylage de la page des rapports personnalisés
+#page-admin-reportbuilder-edit {
+    #page-content div[role=main] {
+        padding-top: 60px !important;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .path-admin {
+        #page-header {
+            padding: 10px 20px;
+            & div.d-flex {
+                flex-wrap: wrap;
+            }
+        }
+        .secondary-navigation .navigation {
+            padding: 0 10px;
+        }
+    }
+}

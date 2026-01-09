@@ -1,0 +1,84 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_theme_sos/theme_sos_footer
+
+    TODO describe template theme_sos_footer
+
+    Example context (json):
+    {
+    }                                   
+}}
+
+{{! footer personnalisé pour la frontpage custom :  
+    * Ajout d'une classe personnalisée "frontnavbar" à la barre de navigation pour des besoins de style.
+    * Ajout d'un logo et d'un titre personnalisés pour la barre de navigation.
+    * Suppression du bouton de basculement de la barre de navigation par défaut pour la vue mobile.
+    * Ajustement de la mise en page et des styles pour un meilleur alignement et espacement.
+}}
+
+
+<!-- Footer -->
+<footer class="front-footer text-center text-lg-start text-secondary">
+  <section class="">
+    <div class="container text-center text-md-start pt-5">
+      <div class="row mt-3">
+        <div class="col-md-8 col-lg-6 mx-auto mb-4">
+          <!-- Logo -->
+          <img src="{{{logofooterurl}}}" class="logo block me-2 mb-4" alt="{{sitename}}" style="height: 2rem;">
+          <!-- Texte footer -->
+          <p>
+            Agence de digitalisation. Nous vous accompagnons dans la mise en place de processus, méthodes et outils pour digitaliser vos formations, créer vos synopsis blended-learning, implémenter votre plateforme pédagogique en ligne, récolter et analyser vos données, suivre les parcours de vos apprenants et évaluer de façon continue la qualité de vos formations.
+          </p>
+        </div>
+        <div class="col-md-4 col-lg-6 mx-auto mb-md-0 mb-4">
+            <div class="text-center text-md-end">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4 text-secondary">Contact</h6>
+            <p><i class="fas fa-home me-3"></i>Metz-Nancy-Luxembourg</p>
+            <p><i class="fa-solid fa-globe me-3"></i>Prestations sur sites ou à distance</p>
+            <p>
+                <i class="fas fa-envelope me-3"></i>
+                damien.will@trainterra.fr
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 33 (0)6 17 25 51 70</p>
+            <!-- Section: Social media -->
+            <div class="d-flex justify-content-center justify-content-lg-end">
+              <div class="me-5 d-none d-lg-block">
+                <span>Suivez-nous sur les réseaux sociaux :</span>
+              </div>
+              <div>
+                <a href="#" class="me-4 text-reset" target="_blank">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/damien-will" class="text-reset" target="_blank">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Bordure -->
+<div class="container border-bottom mt-4"></div>
+  <!-- Copyright -->
+  <div class="text-center p-4">
+    © 2025 Tous droits réservés Trainterra. LMS Moodle préparé par <a href="https://trainterra.fr" target="_blank" class="font-weight-bold text-info">Trainterra</a>
+  </div>
+</footer>

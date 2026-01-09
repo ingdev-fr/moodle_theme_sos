@@ -1,0 +1,200 @@
+.pagelayout-mydashboard {
+    // Suppression de la margin top pour le contenu de la page 
+    & #page.drawers .main-inner {
+        margin-top: 0;
+    }
+
+    & .block-region {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    & .block {
+        // On change la couleur du bg des blocks
+        display: inline-block !important;
+        width: 48% !important;
+        border: 1px solid $secondary !important;
+        border-radius: 5px !important;
+        margin-bottom: 15px !important;
+        // On style les liens du footer des blocks sauf le lien vers l'export calendrier, comme .btn-outline-primary
+        .footer a:not([href*="/calendar/managesubscriptions.php"]) {
+            display: block !important;
+            width: fit-content;
+            padding: 8px !important;
+            margin-top: 10px !important;
+            margin-bottom: 8px !important;
+            background-color: $pink-600 !important;
+            border-color: $pink-600 !important;
+            color: $gray-50 !important;
+            border-radius: 8px;
+            &:focus {
+                background-color: $pink-700 !important;
+                border-color: transparent !important;
+                outline: 0;
+                box-shadow: 0 0 0 .25rem rgb(76 44 105 / .75);
+                color: $gray-50 !important;
+            }
+            &:hover {
+                background-color: $pink-700 !important;
+                border-color: transparent !important;
+                outline: none !important;
+                color: $gray-50 !important;
+                text-decoration: none !important;
+            }
+        }
+
+        .card-header {
+            border-radius: 0 !important;
+        }
+    
+        // On supprime le point de l'after par un espace
+        .bottom span.footer-link:after {
+            content: " " !important;
+        }
+    }
+
+    // Stylage du block de calendrier et des éléments consultés
+    & .block_calendar_month, 
+    & .block_recentlyaccesseditems,
+    & .block_myoverview {
+        width: 100% !important;
+        margin: auto;
+    }
+
+    // Boutons de défilement des cours consultés récemment
+    & .block_recentlyaccessedcourses {
+        .card-carousel {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            .card {
+                box-shadow: $box-shadow;
+                transition: transform 0.2s ease;
+                border: none;
+                margin-right: 8px !important;
+                &:hover {
+                    transform: translate(3px, -3px);
+                }
+            }
+            .card-body {
+                background: $blue-50;
+                a {
+                    font-weight: 600;
+                    &:hover {
+                        color: $primary-500;
+                    }
+                    &:focus {
+                        color: $primary-500;
+                    }
+                }
+                .text-muted span.text-truncate {
+                    padding: 3px 8px;
+                    background: $primary-700;
+                    border-radius: 8px;
+                    margin-top: 8px;
+                    font-weight: 500;
+                    color: $gray-50;
+                    font-size: 12px;
+                }
+            }
+        }
+        .paging-bar-container {
+            margin-top: -5rem;
+        }
+    }
+
+    // Reduction de la taille des icones d'event 
+    .activityiconcontainer .icon {
+        font-size: 20px;
+        height: 32px;
+        width: 32px;
+    }
+
+    // Stylage du block des events
+    & .timeline-event-list-item {
+        border-radius: 8px;
+    }
+
+    // On met une marge négative au bouton "Nouvel événement" pour qu'il soit sur la ligne du titre du bloc
+    & .block_calendar_upcoming .create-event {
+        margin-top: -85px !important;
+    }
+
+    // Stylage des events dans le dashboard
+    & .event {
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        box-shadow: none;
+        background: white;
+    }
+
+    // Stylage des travaux à faire 
+    & .block-timeline {
+        & .timeline-event-list-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 8px;
+            box-shadow: none;
+            background: white;
+        }
+    }
+}
+
+.editing   {
+    // On met une marge droite au bouton "Nouvel événement" quand on est en mode édition, pour pouvoir accèder au paramètres du bloc
+    & .block_calendar_upcoming .create-event {
+        margin-right: 30px;
+    }
+}  
+
+@media (max-width: 1599px) {
+    .pagelayout-mydashboard {
+        #topofscroll {
+            margin-bottom: 0 !important;
+            padding-bottom: 0 !important;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    .pagelayout-mydashboard {
+        & .block {
+            // On change la couleur du bg des blocks
+            display: block !important;
+            width: 100% !important;
+        }
+    }
+    .editing   {
+        // On enleve la marge droite au bouton "Nouvel événement" quand on est en mode édition, pour pouvoir accèder au paramètres du bloc
+        & .block_calendar_upcoming .create-event {
+            margin-right: 0;
+        }
+    }  
+}
+
+@media (max-width: 991px) {
+    .pagelayout-mydashboard {
+        & .block-region {
+            display: block;
+            margin-top: 0px;
+        }
+        #page-content {
+            div[role=main] {
+                padding: 0 0 !important;
+                & .card-body {
+                    padding: 1rem !important;
+                }
+            }
+        }
+        .block {
+            border-radius: 0 !important;
+            border: 0 !important;
+        }
+        #page-header {
+            padding: 5px 15px;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+#page-site-index {
+    height: 100%;
+    .logo {
+        max-height: 30px;
+    }
+    #page {
+        // On enlève le padding de la page d'accueil pourqu'elle occupe toute la largeur et on met une couleur de background
+        padding-left: 0;
+        padding-right: 0;
+        margin-top: 0 !important;
+        #region-main {
+            background-color: transparent;
+        }
+        .page-main {
+        }
+        .frontnavbar {
+            box-shadow: none !important;
+        }
+        #page-content {
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            padding-top: 0 !important;
+        }
+        
+        // On cache la div de contenu généré par Moodle, qui est vide mais qui prend de l'espace en hauteur
+        div[role="main"] {
+            display: none;
+        }
+        // On enleve l'icone qui apparait quand on ouvre un lien dans une nouvelle fenêtre
+        a[href^="https://"]::after {
+            display: none;
+        }
+
+        .badge {
+            background-color: $primary-400;
+        }
+
+        .pretitle {
+            font-family: "DM Sans", "Roboto", serif;
+        }
+
+        .h1-icon {
+            height: 3rem;
+            width: auto;
+        }
+    }
+}
+
+// *********** FRONT FOOTER *************/
+.front-footer {
+    background: $linear-front;
+}
+

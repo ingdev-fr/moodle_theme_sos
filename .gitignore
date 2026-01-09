@@ -1,0 +1,18 @@
+# Ignorer les répertoires de cache du thème
+node_modules/
+
+# Ignorer les fichiers de configuration spécifiques au système local
+*.swp
+*.bak
+
+# Ignorer les fichiers de log et de débogage
+*.log
+*.out
+
+# Ignorer les fichiers d'IDE
+.idea/
+.vscode/
+
+# Ignorer les fichiers temporaires des systèmes d’exploitation
+.DS_Store
+Thumbs.db

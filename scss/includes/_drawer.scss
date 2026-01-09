@@ -1,0 +1,67 @@
+/**************  POUR TOUS LES DRAWERS DU SITE *****************/
+
+.drawerheader {
+    img {
+      height: 38px !important;
+    }
+
+  }
+
+.drawercontent {
+    .list-group-item {
+        border: none;
+        &.active {
+            background-color: $lime-200 !important;
+            color: initial;
+        }
+    }
+}
+
+// Stylage du bouton d'ouverture du drawer 
+.drawer-toggles .drawer-toggler {
+    top: calc(47px + 0.7rem) !important;
+    & .btn {
+        background: $gray-50 !important;
+        & .icon {
+            color: $primary;
+        }
+    }
+}
+
+.drawer.drawer-right.show,
+.drawer.drawer-left.show {
+    top: 50px;
+    padding-bottom:0;
+}
+
+.drawer.drawer-left {
+    background: $gray-50 !important;
+}
+
+.show-drawer-left {
+    padding-left: 0 !important;
+}
+
+/**************  DRAWER DE Gauche *****************/
+
+// Stylage des 3 points du drawer
+#courseindexdrawercontrols button {
+    background-color: $primary-50 !important;
+}
+
+// Stylage du bouton de fermeture du drawer
+.drawer.drawer-left .drawertoggle {
+
+}
+
+@media (max-width: 767px) {
+    // On remonte l'onglet du drawer en mode mobile
+    .drawer-toggles .drawer-right-toggle, .drawer-toggles .drawer-left-toggle {
+        top: 72px;
+    }
+    // On met la largeur du drawer de gauche à full
+    .drawer.drawer-right.show,
+    .drawer.drawer-left.show {
+        max-width: 100% !important;
+    }
+}

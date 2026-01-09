@@ -1,0 +1,21 @@
+// *********** SECTION MARKETING *************/
+.citation {
+    margin-bottom: 60px;
+    &-title {
+        font-family: "DM Sans", "Roboto", serif;
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 991px) {
+    #page-site-index {
+        #page {
+            .citation {
+                margin-top: 40px;
+                &-title {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

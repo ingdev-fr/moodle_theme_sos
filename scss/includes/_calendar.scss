@@ -1,0 +1,22 @@
+.calendar_event_user,
+.calendar_event_course,
+.calendar_event_category,
+.calendar_event_site
+ {
+    // Background des headers
+    background-color: $secondary-50;
+    // Couleur et font du nom des events
+    & .name {
+        color:  $primary-950 !important;
+        font-weight: 600;
+    }
+    // Stylages des icones
+    & .icon {
+        font-size: 1.5rem;
+    }
+    // Stylage des images icones
+    & img.icon {
+        width: 25px;
+        height: 25px;
+    }
+}

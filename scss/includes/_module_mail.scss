@@ -1,0 +1,27 @@
+// Module Mail
+.local-mail {
+    // La liste des tous les items dans le dropdown
+    .local-mail-menu-navbar,
+    .local-mail-view-side-column {
+        // La boite de recherche des cours
+        .local-mail-combo-box {
+            // On passe l'icone en blanc
+            i {
+                color: $primary-50 !important;
+            }
+            .form-control:focus {
+                box-shadow: none !important;
+            }
+        }
+        // Les items de la liste
+        .local-mail-menu-item {
+            &:hover {
+                // On passe les icones en blanc
+                i {
+                    color: $primary-600 !important;
+                }
+            }
+        }
+        
+    }
+}

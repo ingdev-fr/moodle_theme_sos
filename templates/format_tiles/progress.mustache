@@ -1,0 +1,122 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+
+{{!
+    @template format_tiles/progress
+
+    Progress indicator template.
+
+    The purpose of this template is to render a progress indicator
+    as a radial % indicator or fraction (e.g. 2/3 complete) to be
+    displayed on a tile.
+
+    Classes required for JS:
+    * none
+
+    Data attributes required for JS:
+    * none
+
+    Context variables required for this template:
+        * complete - is the section 100% complete (if yes will show check mark instead of indicator)
+        * tileid - which section / tile are we in
+        * numComplete - how many has user completed
+        * numOutOf - how many activities in this section to complete
+        * showAsPercent - how as percent or numeric
+        * isSingleDigit - is the perentage complete a single digit (if yes, x coordinate is offset to keep in centre of circle)
+        * percent - percentage complte
+        * percentCircumf - how big are the circles
+        * percentOffset - the offset of the second circle which actually shows the progress - see PHP round(((100 - $percentcomplete) / 100) * $CIRCUMFERENCE, 0)
+        * isOverall - if this is an overall progress indicator or not
+
+    Example context (json):
+        {
+        "complete": false,
+        "tileid": 3,
+        "numComplete": 6,
+        "numOutOf": 10,
+        "showAsPercent": 1,
+        "isSingleDigit": false,
+        "percent": 60,
+        "percentCircumf": 106.8,
+        "percentOffset": 42
+        }
+}}
+
+{{^hastilephoto}}
+    {{#numOutOf}}
+        {{! if the progress is out of zero then do not show the indicator at all}}
+        {{! J'ai changé tout le block de la classe progress pour qu'elle corresponde à une barre de progression }}
+        {{#showAsPercent}}
+            <div class="progress-indic percent{{#isOverall}} overall-progress align-top{{/isOverall}} tiles-hide-if-complete" id="tileprogress-{{tileid}}"
+                data-numcomplete="{{numComplete}}" data-numoutof="{{numOutOf}}">
+                <div class="progress-indic-label mb-1 text-primary">
+                    {{#isOverall}}{{#str}}overallprogressshort, format_tiles{{/str}}{{/isOverall}}{{^isOverall}}{{#str}}progress, format_tiles{{/str}}{{/isOverall}}
+                </div>
+                <div class="progress">
+                    <div id="percent-bar-{{tileid}}"
+                        class="progress-bar {{#isOverall}}bg-info{{/isOverall}}{{^isOverall}}bg-success{{/isOverall}}"
+                        role="progressbar"
+                        style="width: {{percent}}%;"
+                        aria-valuenow="{{percent}}" aria-valuemin="0" aria-valuemax="100">
+                        {{percent}}%
+                    </div>
+                </div>
+            </div>
+        {{/showAsPercent}}
+
+        {{^showAsPercent}}
+            <div class="progress-indic{{#isOverall}} overall-progress align-top{{/isOverall}}  tiles-hide-if-complete bg-info" id="tileprogress-{{tileid}}"
+                 data-numcomplete="{{numComplete}}" data-numoutof="{{numOutOf}}">
+                {{#str}}progress, format_tiles{{/str}}:
+                <span class="num-complete">{{numComplete}}</span><span> / </span><span class="num-out-of">{{numOutOf}}</span>
+            </div>
+        {{/showAsPercent}}
+
+        {{! Now the "is complete" indicator }}
+        <div class="progress-indic{{#showAsPercent}} percent{{/showAsPercent}} tiles-hide-if-incomplete" id="tileprogress-{{tileid}}-allcomplete"
+             data-numcomplete="{{numComplete}}" data-numoutof="{{numOutOf}}">
+            {{#isOverall}}
+                <div class="progress-indic progress-indic-label" id="tileallcomplete-{{tileid}}" data-numcomplete="{{numComplete}}" data-numoutof="{{numOutOf}}">
+                    {{#pix}}completion-check, format_tiles, {{#str}}allcomplete, format_tiles{{/str}}{{/pix}}
+                    {{#str}}allcomplete, format_tiles{{/str}}
+                </div>
+            {{/isOverall}}
+        </div>
+    {{/numOutOf}}
+{{/hastilephoto}}
+
+{{#hastilephoto}}
+    {{#numOutOf}}
+        {{! The not complete indicator }}
+        {{! J'ai ajouté des classes de styles à progress-indic en pourcentage }}
+        {{#showAsPercent}}
+            <div class="progress-indic{{#showAsPercent}} percent rounded-left bg-info py-1 px-3{{/showAsPercent}} tiles-hide-if-complete" id="tileprogress-{{tileid}} fs-4"
+                data-numcomplete="{{numComplete}}" data-numoutof="{{numOutOf}}">
+                {{#str}}progress, format_tiles{{/str}}: <span class="percent-complete">{{percent}}</span><span>%</span>
+            </div>
+        {{/showAsPercent}}
+        {{^showAsPercent}}
+            <div class="progress-indic{{#isOverall}} overall-progress align-top{{/isOverall}} tiles-hide-if-complete" id="tileprogress-{{tileid}}"
+                data-numcomplete="{{numComplete}}" data-numoutof="{{numOutOf}}"
+                title="{{{progresstitle}}}"
+            >
+                {{#str}}progress, format_tiles{{/str}}:
+                <span class="num-complete">{{numComplete}}</span><span> / </span><span class="num-out-of">{{numOutOf}}</span>
+            </div>
+        {{/showAsPercent}}
+    {{/numOutOf}}
+{{/hastilephoto}}

@@ -1,0 +1,93 @@
+.course-section {
+    & .section-item {
+        border-radius: 3px;
+    }
+}
+
+// On passe la taille de police des sections à 14px (comme celle des activités)
+.section .content .summarytext {
+    font-size: 16px; 
+}
+
+.course-content {
+    // Stylage des sections du contenu de cours
+    & .section-item {
+        border-top: 2px solid $primary;
+        background: $gray-50;
+        // Stylage du header de la section 
+        & .course-section-header {
+            & .sectionname {
+                padding-left: 18px;
+                a {
+                    font-weight: 600;
+                    font-size: 1.4rem;
+                }
+                // On ajoute un icone font awesome devant le titre des sections
+                &::before {
+                    font-family: "Font Awesome 6 Free";
+                    content: "\f51b"; // Icône chalkboard 
+                    font-weight: 900; // Nécessaire pour les icônes en version Solid 
+                    margin-right: 8px;
+                    color: $primary;
+                }
+            }
+            & .btn-icon{
+                background: $primary;
+                & i {
+                    color: $gray-50;
+                }
+                &:hover {
+                    background: $primary-400;
+                }
+                &:focus {
+                    background: $primary-400;
+                }
+            }
+        } 
+        // Stylage du bouton tout replier
+        & .section-collapsemenu {
+            padding: 8px;
+            background: $secondary;
+            border-radius: .5rem; 
+            color: $gray-50;
+            font-weight: 500;
+            &:hover {
+                background: $primary-950;
+                text-decoration: none;
+            }
+            &:focus {
+                box-shadow: none;
+                background-color: $secondary;
+                outline: none;
+            }
+        }
+        .summarytext {
+            padding-left: 18px;
+            padding-right: 15px;
+            & p {
+                color:$primary-950;
+            }
+        }
+    }
+    & .delegated-section .section-item .course-section-header{
+        background: $primary-50;
+    }
+    & .card-body {
+        padding-top: 0;
+        padding-bottom: 0;
+        min-height: 0;
+    }
+    // Stylage des sous-sections
+    & .subsection {
+        border-top: 2px solid $primary;
+        & .activity-item {
+            .sectionname {
+                padding-left: 0;
+            }
+
+        }
+        .course-section-header {
+            background: transparent !important;
+        }
+    }
+}

@@ -1,0 +1,22 @@
+// Stylage de l'activité devoir
+
+// Stylage du lien d'un fichier attaché en pièce jointe
+.fileuploadsubmission {
+    & a {
+        color: $fuchsia-700;
+        margin-right: 8px;
+        font-weight: 600;
+        display: inline-block;
+        margin-top: 5px;
+    }
+    & img.icon {
+        max-height: 32px !important;
+        max-width: 32px !important;
+        height: 32px !important;
+        width: 32px !important;
+    }
+}
+
+.fileuploadsubmissiontime {
+    margin-top: 5px;
+}

@@ -1,0 +1,19 @@
+.block_myprogress {
+    background-color: $lime-100;
+    border: none;
+    & .card-text {
+        margin-top: 0 !important;
+    }
+    & h3 {
+        display: none !important;
+    }
+    & p {
+        margin-bottom: 10px !important;
+        font-size: 1rem;
+        font-weight: 600;
+        color: $primary;
+    }
+    & .progress-bar {
+        background: $lime-200 !important;
+    }
+}

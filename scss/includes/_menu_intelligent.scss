@@ -1,0 +1,21 @@
+// La classe "menu_catalogue" du lien du catalogue du menu intelligent est ajouté dans l'interface Boost-union
+// On le style comme .btn-outline-primary + une ms
+.menu_catalogue {
+    a {
+        height: 30px;
+        margin-top: 15px;
+        border-radius: 5px;
+        border: none;
+        margin-right: 6px;
+        &:hover {
+            background: $primary;
+            color: $gray-50;
+        }
+        &.active {
+            background: $lime-600;
+            border: none;
+            box-shadow: none;
+            color: $gray-50;
+        }
+    }
+}

@@ -1,0 +1,148 @@
+{{!
+    This file is part of Moodle - http://moodle.org/
+
+    Moodle is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    Moodle is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+}}
+{{!
+    @template theme_theme_sos/custom_frontpage/includes/hero-section
+
+    TODO describe template features-section
+
+    Example context (json):
+    {
+    }
+}}
+
+{{! --------- Hero section --------- }}
+<section class="hero-section">
+    {{! Navbar spécifique au thème }}
+	<div class="pt-2">
+    	{{> theme_theme_sos/custom_frontpage/includes/navbar_front }}
+	</div>
+	<div class="container-fluid">
+		<div class="hero-section-content d-flex align-items-center justify-content-center">
+			<div class="position-relative w-100 h-100">
+				<!-- Calque coloré du haut de page -->
+				<div class="layer-top position-absolute w-100" style="top:0; left:0; height: 200px; z-index: 1; pointer-events: none;">
+					<div class="shape-1 gradient-top w-100 h-100"></div>
+				</div>
+				<!-- Calque coloré du bas de page -->
+				<div class="layer-bottom position-absolute w-100" style="bottom:0; left:0; height: 150px; z-index: 1; pointer-events: none;">
+					<div class="shape-2 gradient-bottom w-100 h-100"></div>
+				</div>
+				{{! --------- Hero content --------- }}
+				<div class="my-5 pt-5 col-12 col-md-10 col-lg-9 mx-auto px-0 px-sm-2">
+					<h1 class="hero-title h5 d-block rounded text-white mb-4">
+						<span class="badge px-3 py-2">
+							<i class="fa-solid fa-chalkboard pe-2"></i>
+							{{#isFrench}}
+								<span class="font-weight-normal">Plateforme LMS Trainterra</span>
+							{{/isFrench}}
+							{{#isEnglish}}
+								Learning platform from Trainterra
+							{{/isEnglish}}
+						</span>
+					</h1>
+					<p class="mx-auto mb-3 display-4 font-weight-bold text-white">Le LMS de démonstration</p>
+					<h2 class="hero-subtitle h3 d-block text-secondary mb-5">
+						Visitez une plateforme open source Moodle optimisée pour le confort de vos utilisateurs !
+					</h2>
+					<div class="row align-items-center">
+						<div class="col-12 col-lg-7 px-lg-6 order-2 order-lg-1">
+							<dl>
+								<div class="position-relative pl-6 mb-5">
+									<span style="position: absolute; top: 6px; left: 0;">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="40" height="40" fill="currentColor" class="bi bi-motherboard-fill" style="color: #b4a3ffff;">
+										<path d="M5 7h3V4H5z"/>
+										<path d="M1 2a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2v-2H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 9H1V8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6H1V5H.5a.5.5 0 0 1-.5-.5v-2A.5.5 0 0 1 .5 2zm11 .5a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0zm2 0a.5.5 0 0 0-1 0v7a.5.5 0 0 0 1 0zM3.5 10a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zM4 4h-.5a.5.5 0 0 0 0 1H4v1h-.5a.5.5 0 0 0 0 1H4a1 1 0 0 0 1 1v.5a.5.5 0 0 0 1 0V8h1v.5a.5.5 0 0 0 1 0V8a1 1 0 0 0 1-1h.5a.5.5 0 0 0 0-1H9V5h.5a.5.5 0 0 0 0-1H9a1 1 0 0 0-1-1v-.5a.5.5 0 0 0-1 0V3H6v-.5a.5.5 0 0 0-1 0V3a1 1 0 0 0-1 1m7 7.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 0-.5.5"/>
+										</svg>
+									</span>
+									<p class="hero-title-content d-inline font-weight-bold text-white text">Open source et évolutive.</p>
+									<p class="d-inline text-secondary">
+										La plateforme est un LMS Moodle dans sa dernière version stable, open source, bénéficiant des fonctionnalités modernes, configurable pour des formations courtes ou des parcours longs, bénéficiant des mises à jour périodiques de la communauté Moodle. 
+									</p>
+								</div>
+								<div class="position-relative pl-6 mb-5">
+									<span style="position: absolute; top: 6px; left: 0;">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="40" height="40" fill="currentColor" class="bi bi-columns-gap" style="color: #b4a3ffff;">
+										<path d="M6 1v3H1V1zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1zm14 12v3h-5v-3zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1zM6 8v7H1V8zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1zm14-6v7h-5V1zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1z"/>
+										</svg>
+									</span>
+									<div >
+										<p class="d-inline font-weight-bold text-white">Look et ergonomie revus.</p>
+										<p class="d-inline text-secondary">
+											Le LMS a été préparé pour proposer un look plus moderne, une navigation et une interface améliorées, des menus personalisés, un tableau de bord optimisé pour les apprenants et les formateurs.
+										</p>
+									</div>
+								</div>
+								<div class="position-relative pl-6 mb-5">
+									<span style="position: absolute; top: 6px; left:0;">
+										<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" width="40" height="40" fill="currentColor" class="bi bi-box-seam-fill" style="color: #b4a3ffff;">
+										<path fill-rule="evenodd" d="M15.528 2.973a.75.75 0 0 1 .472.696v8.662a.75.75 0 0 1-.472.696l-7.25 2.9a.75.75 0 0 1-.557 0l-7.25-2.9A.75.75 0 0 1 0 12.331V3.669a.75.75 0 0 1 .471-.696L7.443.184l.01-.003.268-.108a.75.75 0 0 1 .558 0l.269.108.01.003zM10.404 2 4.25 4.461 1.846 3.5 1 3.839v.4l6.5 2.6v7.922l.5.2.5-.2V6.84l6.5-2.6v-.4l-.846-.339L8 5.961 5.596 5l6.154-2.461z"/>
+										</svg>
+									</span>
+									<p class="hero-title-content  d-inline font-weight-bold text-white">Différents types de contenus.</p>
+									<p class="d-inline text-secondary">
+										Profitez de votre visite pour juger de la qualité des différents types de contenus pédagogiques proposés : H5P, Easygenerator, Ispring, Articulate Rise, activités Moodle. Trouvez votre éditeur préféré et lancez-vous dans la digitalisation et l'intégration de vos contenus !
+									</p>
+								</div>
+							</dl>
+						</div>
+						<div class="col-12 col-lg-5 d-flex justify-content-center order-1 order-lg-2 mb-5 mb-lg-0">
+							<img src="{{{heroimageurl}}}" alt="De nombreux étudiants en train d'apprendre et d'échanger" class="frontimage img-fluid rounded-circle shadow-custom"/>
+						</div>
+					</div>
+					{{!  --------- Buttons ---------  }}
+					<div class="d-grid gap-3 d-sm-flex mt-2 mb-3 ps-xl-5">
+						{{!  --------- Button 1 ---------  }}
+						<a class="btn btn-pink px-xl-5 py-3 px-3 py-xl-3 lg:me-3 fs-6 fw-bolder shadow-custom" href="{{{accountcreateurl}}}">
+							{{#isFrench}}
+								Créer un compte démo
+							{{/isFrench}}
+							{{#isEnglish}}
+								Create your demo account
+							{{/isEnglish}}
+						</a>
+						{{!  --------- Button 2 ---------  }}
+						<a class="btn btn-blue px-xl-5 py-3 px-md-3 py-xl-3 fs-6 fw-bolder shadow-custom" href="{{{contacturl}}}" target="_blank" rel="noopener noreferrer">
+							{{#isFrench}}
+								Contactez-nous
+							{{/isFrench}}
+							{{#isEnglish}}
+								Contact us
+							{{/isEnglish}}
+						</a>
+					</div>
+					<!-- --------- Partners --------- 
+					<div class="mt-6 py-6">
+							<div class="row flex-column flex-lg-row align-items-center">
+								<div class="col-auto">
+									<p class="text-light mb-lg-0">
+										Trainterra est partenaire officiel de
+									</p>
+								</div>
+								<div class="d-flex justify-content-center align-items-center mb-4 mb-lg-0 col-auto">
+									<img src="{{easyimageurl}}" alt="Logo Easygenerator" class="rounded" style="max-height:3rem;" />
+								</div>
+							</div>
+						</div>
+					</div>
+					-->
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+

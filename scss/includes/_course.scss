@@ -1,0 +1,62 @@
+// On cache l'image du cours dans le full-header pour les pages de section
+#page-course-view-section-topics {
+    #courseheaderimage {
+        display: none !important;
+    }
+}
+
+// On cache l'image du cours dans le courseindex pour la page d'accueil du cours
+#page-course-view-topics {
+    .courseindex-image {
+        display: none !important;
+    }
+}
+
+// Sur la page d'inscription auto à un cours, on agrandit l'image du cours
+#page-enrol-index {
+    .coursebox .content .courseimage img {
+        max-width: 400px !important;
+        max-height: 200px !important;
+        border-radius: 8px !important;
+    }
+}
+
+// Stylage du chemin breadcrumb
+.breadcrumb {
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    border-radius: 4px;
+    margin-bottom: 8px !important;
+    font-size: 12px;
+    & a {
+        font-weight: 600;
+        color:$fuchsia-700 !important;
+        &:hover {
+            color: $secondary !important;
+            text-decoration: none;
+        }
+        &:focus {
+            color: $secondary !important;
+            box-shadow: none;
+        }
+    }
+    &-item {
+        span {
+            color: $secondary-100;
+        }
+    }
+}
+
+@media (max-width: 991px) {
+    #page-enrol-index {
+        .coursebox .content .d-flex {
+            display: block !important;
+        }
+        .coursebox .content .courseimage img {
+            object-fit: cover;
+            width: 100%;
+        }
+    } 
+}

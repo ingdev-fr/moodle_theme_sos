@@ -1,0 +1,41 @@
+/****************************************************************
+ * EXTENSION POINT:
+ * Add your SCSS code here.
+ * It will be added on top of Boost Union's SCSS code.
+ ***************************************************************/
+@import "includes/variables";
+@import "includes/global";
+@import "includes/btn";
+@import "includes/calques";
+@import "includes/boost_union";
+@import "includes/navbar";
+@import "includes/modal";
+@import "includes/frontpage";
+@import "includes/dashboard";
+@import "includes/mycourses";
+@import "includes/drawer";
+@import "includes/blocks";
+@import "includes/calendar";
+@import "includes/alert";
+@import "includes/course";
+@import "includes/course_sections";
+@import "includes/course_activities";
+@import "includes/course_index";
+@import "includes/my_progress";
+@import "includes/questions";
+@import "includes/scorm";
+@import "includes/assign";
+@import "includes/admin";
+@import "includes/tiles_format";
+@import "includes/marketing";
+@import "includes/marketing-section";
+@import "includes/features-section";
+@import "includes/hero-section";
+@import "includes/login_page";
+@import "includes/usermenu";
+@import "includes/userpages";
+@import "includes/htmlblocks";
+@import "includes/module_mail";
+@import "includes/menu_intelligent";
+@import "includes/policy";
+@import "includes/h5p";

@@ -1,0 +1,30 @@
+// *********** SECTION FEATURES *************/
+.front-features {
+    padding-top:60px;
+    padding-bottom:70px;
+    &-img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-width: 991px) {
+    .front-features {
+        &-img {
+            max-height: 250px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .front-features {
+        padding-top:10px;
+        padding-bottom:30px;
+        &-img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

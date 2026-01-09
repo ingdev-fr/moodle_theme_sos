@@ -1,0 +1,120 @@
+/**************  STYLAGE DU DRAWER DU COURS (INDEX) *****************/
+.courseindex {
+    // Stylage des sections du drawer (title + content)
+    & .courseindex-section {
+        border-radius: 5px;
+        padding-bottom: 10px;
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    // ****************  Stylage des liens du drawer (global) ***********
+    & .courseindex-item {
+        padding: 4px;
+        text-align: left;
+        border-radius: 5px 5px 0 0;
+        // Quand le lien est inactif (session ou activité restreinte)
+        &.dimmed.pageitem a {
+            color: rgb(104, 104, 104);
+        }
+        // Stylage des chevrons des liens du drawer
+        & .courseindex-chevron i {
+            margin-top: 0 !important;
+        }
+    }
+
+    // ********************  Stylage du contenu des sections du drawer (sous-sections et activités) *********************
+    & .courseindex-sectioncontent {
+        padding-left : 15px;
+        padding-right: 10px;
+        padding-top: 6px;
+        background: white;
+        // La sous-section
+        & .courseindex-section {
+            border: none;
+        }
+        // Stylage de l'item activité d'une section
+        & .courseindex-item {
+            // Stylage des liens a de l'item d'activité
+            & .courseindex-link {
+                border-radius: 5px;
+                color: black;
+                display: block;
+                width: 100%;
+                height: 100%;
+                padding: 4px;
+                font-size: 14px !important;
+                text-overflow: unset;
+                white-space: wrap;
+                &:hover {
+                    background: $primary-50;
+                }
+                &:focus {
+                    box-shadow: none;
+                }
+            }
+            // Stylage de l'icone de l'activité quand elle est achevée
+            & .completion_complete i {
+                color: $green-600;
+            }
+            // Stylage des icones des liens de l'item d'activité
+            & .icon {
+                margin-top: 9px;
+                font-size: 12px;
+            }
+        }
+        & .courseindex-section-title {
+            padding-left: 0px !important;
+        }
+    }
+
+    // ************* Stylage des titles des sections du drawer (sections principales + sous sections) *********************
+    & .courseindex-section-title {
+        text-align: left;
+        padding: 10px 5px;
+        border-bottom: 2px solid $primary-300;
+        &:hover {
+            background: $primary-50;
+        }
+        &:focus {
+            box-shadow: none;
+        }
+        // Stylage du lien des sous-sections
+        & .courseindex-link {
+            background: transparent !important;
+            border: none !important;
+            color: $primary-950;
+            padding-left: 10px;
+        }
+    }
+
+    // Stylage des sections ou activités quand actives 
+    .pageitem {
+        border-radius: 5px;
+        border: none;
+        color: $gray-50;
+        &:hover {
+            color: $gray-50;
+            background: $primary;
+            & a {
+                background-color: transparent !important;
+            }
+        }
+        &:focus {
+            box-shadow: none;
+            color: $gray-50;
+            background: $primary;
+        }
+        // Stylage des liens a de l'item d'activité
+        & .courseindex-link {
+            color: $gray-50 !important;
+        }
+        & .icon {
+            color: $gray-50 !important;
+        }
+        & .completion_complete i {
+            color: $green-600 !important;
+        }
+    }
+}

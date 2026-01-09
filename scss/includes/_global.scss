@@ -1,0 +1,157 @@
+/*  On ajoute dans le HTML additionnel de Moodle le code suivant pour l'import des poilces Google : 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Liter&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+*/
+
+html {
+  font-size: 16px; /* 1rem = 16px */
+}
+
+body, h5, h6, p, .activity, .section {
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+h1, h2, h3 {
+    font-family:  'Inter', 'Open Sans', sans-serif !important;
+    font-weight: 600 !important;
+}
+
+body {
+    // Suppression du troncage des textes
+    & .text-truncate {
+        white-space: normal !important;
+        overflow: visible !important;
+        text-overflow: unset !important;
+        word-wrap: break-word; /* Permet de couper les mots longs */
+    }
+}
+
+h1, h2, h3, h4, h5, h6, span.clickable {
+    color:  $primary;
+}
+
+p {
+    font-size: 1rem;
+}
+
+// La page
+#page {
+    margin-top: 0 !important;
+}
+
+// Margin top de 50px car c'est la hauteur de la nav
+.main-inner {
+    padding: 0 0 !important;
+    margin-top: 50px !important;
+    margin-bottom: 0 !important;
+    border-radius: 0 !important;
+    .card-text hr {
+        display: none;
+    }
+}
+
+.header-maxwidth {
+    max-width: 100% !important;
+}
+
+#page.drawers {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 0 !important;
+}
+
+#page-header {
+    padding: 10px 60px;
+    background: $linear-section;
+    // Boutons d'actions du haut de page 
+    & .header-action button, 
+    & .btn {
+        background: $primary-50;
+        &:hover {
+            background: $gray-50;
+        }
+    }
+    & .header-button-group a {
+        color: $fuchsia-700 !important;
+    }
+    & a:not(.quickeditlink, .btn-icon, .dropdown-item, .sectionbutton, #message-user-button) {
+        font-weight: 600;
+        color:$gray-50 !important;
+        &:hover {
+            color: $primary-50 !important;
+        }
+        &:focus {
+            color: $primary-50 !important;
+            box-shadow: none;
+        }
+    }
+    a#message-user-button {
+        border-radius: 5px !important;
+    }
+}
+
+// Titre du haut de page
+.page-context-header {
+    margin-bottom: 0 !important;
+}
+.page-header-headings {
+    padding: 8px 16px;
+    background: white;
+    border-radius: 5px;
+    & h1 {
+        font-size: 21px !important;
+        font-weight: 600 !important;
+    }
+    & .text-muted {
+        color: $secondary !important;
+    }
+}
+
+#page-content {
+    div[role=main] {
+        padding-left: 60px !important;
+        padding-right: 60px !important;
+        padding-bottom: 45px !important;
+        padding-top: 15px !important;
+    }
+}
+
+// La couleur du texte d'erreur
+.text-danger {
+    color: $red-400 !important;
+}
+
+// On crée une classe qui permet de tronquer le texte après 3 lignes
+.tronquer-multiligne {
+    display: -webkit-box;           /* boite flexible WebKit */
+    -webkit-box-orient: vertical;  /* orientation verticale pour WebKit */
+    -webkit-line-clamp: 3;          /* nombre de lignes à afficher (ancienne syntaxe) */
+    line-clamp: 3;                  /* propriété standard récente */
+    overflow: hidden;               /* cache l’excédent de texte */
+}
+
+@media (max-width: 991px) {
+    #page-content {
+        div[role=main] {
+            padding-left: 15px !important;
+            padding-right: 15px !important;
+            & .card-body {
+                padding: 1rem !important;
+            }
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    // On supprime la marge haute de la page
+    #page {
+        margin-top: 50px !important;
+    }
+    #topofscroll {
+        margin-top: 0 !important;
+    }
+    #page-header {
+        border-radius: initial;
+    }
+}

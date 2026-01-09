@@ -1,0 +1,76 @@
+.course-content {
+    // Stylage des sections du contenu de cours
+    & .section-item {
+        // Stylage des activités affichées dans une section
+        & .activity-wrapper {
+            // Stylage des boutons de l'activité
+
+            // Stylage des boutons des groupes d'une activité
+            & .groupmode-information img{
+                background: $gray-50;
+                border-radius: 50%;
+                margin-bottom: 5px;
+            }
+            // STylage des titres des activités
+            & .activityname {
+                font-weight: 600;
+                color: $primary-300;
+                font-size: 1.2rem;
+                & a {
+                color: $primary;
+                    &:hover {
+                        color: $lime-950;
+                    }
+                }
+            }
+        }
+        // Stylage du container de l'activité Texte et média
+        .activity-item {
+            border-radius: unset;
+            border-left: 6px solid $lime-200;
+            &.activityinline {
+                padding: 0.75rem !important;
+            }
+        }
+
+        // Stylage du résumé des activités de la section
+        .section-summary-activities {
+            background: $lime-200;
+            padding-left: 16px;
+            padding-right: 16px;
+            border-radius: 0 0 3px 3px;
+            font-weight: 700;
+            // On masque le compteur d'activités qui prend en compte aussi les sous sections
+            & > div:first-child {
+                display: none !important;
+            }
+            // On met un padding vertical à l'énumération des activités
+            & > div:nth-child(2) {
+                padding-top: 5px;
+                padding-bottom: 5px;
+            }
+        }
+    }
+}
+
+// Stylage des icones d'activités
+.activityiconcontainer {
+
+
+}
+
+.activity-grid {
+    padding: 10px;
+    border-radius: 3px;
+}
+
+// La description des activités est trop petite à lire, on augmente la font size
+.activity-description {
+}
+
+// Les activités qui sont des sous-sections : 
+.subsection {
+    .activity-item {
+        border-left: 6px solid $primary !important;
+    }
+}

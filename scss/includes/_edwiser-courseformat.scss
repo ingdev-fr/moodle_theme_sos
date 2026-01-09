@@ -1,0 +1,171 @@
+#page-course-view-remuiformat {
+    & .section {
+        .single-card {
+            background-color: $primary-50 !important;
+            border: 2px solid $primary-200 !important;
+            padding: 12px !important;
+        }
+        .section-header {
+            background: $secondary-950 !important;
+            border-radius: 5px !important;
+            padding-top: 5px !important;
+            padding-left: 10px !important;
+            padding-right: 10px !important;
+            padding-bottom: 5px !important;
+            h2 {
+                color: $gray-50 !important;
+                font-size: 1.2rem !important;
+            }
+        }
+        .activity-icon {
+            align-self: initial !important;
+        }
+        .activity-content {
+            margin-top: 5px;
+        }
+        h4 {
+            display: flex !important;
+            align-items: start !important;
+            & .activityname {
+                margin-top: 0px !important;
+                margin-left: 8px !important;
+            }
+        }
+    }
+
+    #page-header {
+        border-radius: 0 !important;
+    }
+    
+    & .header-main-section {
+        // On fait apparaitre le titre du cours car il est en blanc 
+        & .header-heading {
+            color: #550f52 !important;
+            // On élargie le cadre du titre
+            & .text_to_html {
+                padding: 15px !important;
+            }
+        }
+        & .badge {
+            color: $primary !important;
+        }
+    }
+    & .subsection .activity-item {
+    border: none !important;
+    }
+    #section-0 {
+        background-color: $gray-50;
+        padding: 25px !important;
+        border: 1px solid $secondary-50 !important;
+        border-top: 10px solid $secondary-950 !important;
+        border-radius: 8px;
+        margin-bottom: 25px !important;
+    }
+    .list-summary-section {
+        border-left: 3px solid #b6b6db !important;
+    }
+    .sections.generalsection-container {
+        margin-bottom: 0 !important;
+    }
+    .general-section-activities .activity {
+        border: 3px solid $primary-50 !important;
+        // STylage des titres des activités
+        & .activityname {
+            font-weight: 700;
+            color: $primary-300;
+            font-size: 1.2rem;
+            & a {
+            color: $primary;
+                &:hover {
+                    color: $lime-950;
+                }
+            }
+        }
+    }
+
+    // Format par liste 
+    .remui-format-list {
+        li {
+            & .activity-badges,
+            & .activity-altcontent {
+                margin-left: 0 !important;
+            }
+        }
+        & .activity-item {
+            background: $primary-50 !important;
+            border: 1px solid $secondary-50 !important;
+        }
+        & .activityname {
+            font-weight: 700;
+            color: $primary-300;
+            & a {
+            color: $primary;
+            font-size: 1.4rem !important;
+                &:hover {
+                    color: $lime-950;
+                }
+            }
+        }
+        & .section-summary-activities {
+            background: transparent !important;
+        }
+        & .subsection {
+            background: #550f52;
+        }
+
+    }
+    .title-activity-container {
+        flex-direction: row !important;
+    }
+} 
+
+// Allongement des boutons de complétion
+.completion-container {
+    .btn {
+        width: 100% !important;
+    }
+}
+
+// Disparition du pop-up de bas de page 
+#beacon-container {
+    display: none;
+}
+
+// disparition des breadcrumbs
+.format-remuiformat {
+    .breadcrumb {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    #page-course-view-remuiformat {
+        #section-0 {
+            padding: 0 !important;
+            padding-bottom: 25px !important;
+            margin-bottom: 0;
+            .card {
+                padding-left: 0 !important;
+                padding-right: 0 !important;
+            }
+            li.delegated-section {
+                padding: 24px !important;
+                margin-right: 20px !important;
+            }
+            .section-title {
+                margin-top: 10px !important;
+            }
+            .activity {
+                margin-right: 20px !important;
+            }
+        }
+        .general-section {
+            gap: 10px !important;
+            padding-left: 20px !important;
+        }
+        .title-activity-container {
+            flex-direction: column !important;
+            align-items: start !important;
+        }
+    }
+}

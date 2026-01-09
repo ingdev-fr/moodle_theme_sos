@@ -1,0 +1,37 @@
+// Stylage du lien a du menu marketing
+a.marketingcontact {
+    align-items: center !important;
+    background: $secondary;
+    color: $gray-50 !important;
+    margin-left: 70px;
+    &:hover {
+        background-color: $primary !important;
+    }
+    &:focus {
+        background-color: $primary !important;
+    }
+    &.active {
+        color: black;
+      }
+}
+// Stylage du lien de la li du menu marketing (le lien et la li ont la même classe !)
+.marketingcontact a.active {
+    color: black !important;
+    &:hover {
+        color: $gray-50 !important;
+    }
+    &:focus {
+        color: $gray-50 !important;
+    }
+}
+
+@media (max-width: 1763px) {
+    //Stylage block région à droite
+    a.marketingcontact {
+        margin-left: initial;
+        margin-top: 15px;
+        & i {
+            margin-right: 12px;
+        }
+    }
+}

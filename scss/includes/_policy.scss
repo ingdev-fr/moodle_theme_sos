@@ -1,0 +1,16 @@
+// Page d'affichage des polices
+#page-admin-tool-policy-view {
+    #page-header {
+        display: none;
+    }
+}
+
+/**************  MEDIA QUERIES  ************/
+
+@media (min-width: 767px) {
+    #page-admin-tool-policy-view {
+        #page-content {
+            margin-top: 60px;
+        }
+    }
+}

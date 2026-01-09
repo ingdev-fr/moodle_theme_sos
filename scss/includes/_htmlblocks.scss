@@ -1,0 +1,28 @@
+// Block 'Headsection - Entête de section'
+.headsection {
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 8px;
+    }
+}
+
+@media (max-width: 991px) {
+    .headsection {
+        img {
+            max-height: 250px;
+        }
+    }
+}
+
+@media (max-width: 767px) {
+    .headsection {
+        padding-top:10px;
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}

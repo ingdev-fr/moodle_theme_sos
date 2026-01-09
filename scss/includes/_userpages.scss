@@ -1,0 +1,28 @@
+.path-user, .pagelayout-admin {
+    #page-header {
+        // Image du User dans le page-header
+        .page-header-image {
+            img {
+                width: 50px !important;
+                height: 50px !important;
+            }
+        }
+    }
+    .editprofile a {
+        background: $pink-700;
+        color: $gray-50;
+        padding: 5px 10px;
+        border-radius: 5px;
+        &:hover {
+            background: $pink-800;
+            text-decoration: none;
+        }
+        &:focus {
+        background-color: $pink-800;
+        border-color: transparent !important;
+        color: $gray-50 !important;
+        outline: 0;
+        box-shadow: 0 0 0 .25rem rgb(76 44 105 / .75);
+        }
+    }
+}

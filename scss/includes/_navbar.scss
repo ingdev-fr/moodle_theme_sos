@@ -1,0 +1,107 @@
+/****** Navbar sur la page d'accueil ***********/
+#page-site-index {
+  .frontnavbar {
+    background: transparent !important;
+    border : none !important;
+    min-height:6vh !important;
+  }
+  // Couleur du bouton des langues
+  .langmenu .langbutton{
+        color: white !important;
+  }
+  // Couleur de l'after du lien dropdown du menu des langues
+  #lang-menu-toggle::after {
+    color: white !important;
+}
+    // Couleur du texte du login (usermenu)
+    .usermenu .login a {
+      color: white !important;
+  }
+  // Customisation du titre de la marque à coté du logo dans la navbar
+  .navbarfrontpage-title {
+    font-size: 2rem;
+    line-height: 1.6rem;
+  }
+  // On n'affiche pas le toggler pour la navbar sur la page d'accueil
+  .navbar-toggler{
+    display: none;
+  }
+
+  .logo {
+    max-height: 45px;
+  }
+}
+
+/***** Pour l'ensemble du site *****************/
+
+// Couleur du background de la navbar 
+.navbar {
+  background: white!important;
+  border: none !important;
+  height: 50px !important;
+  box-shadow: 0 1px 3px 0 rgba(0,0,0,0.1), 0 1px 2px -1px rgba(0,0,0,0.1) !important;
+}
+// Stylage du logo
+.navbar.fixed-top .navbar-brand .logo {
+  max-height: 30px !important;
+}
+
+// On remet une image de fond au bouton du menu responsive car elle avait disparu ! 
+.navbar-toggler-icon {
+  background-image: url('data:image/svg+xml,%3csvg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30"%3e%3cpath stroke="rgba(0, 0, 0, 0.6)" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/%3e%3c/svg%3e') !important;
+}
+
+// Stylage des liens de la navigation primaire
+.primary-navigation .navigation {
+  & .nav-link {
+      height: 30px;
+      margin-top: 15px;
+      border-radius: 5px;
+      border: none;
+      margin-right: 6px;
+      &:hover {
+        background: $primary;
+        color: $gray-50;
+      }
+      &.active {
+        background: $lime-600;
+        border: none;
+        box-shadow: none;
+        color: $gray-50;
+      }
+    }
+  & .dropdown-item {
+    &:hover {
+      background: $primary;
+    }
+  }
+}
+
+.secondary-navigation {
+  padding-bottom: 0px !important;
+  .navigation {
+    margin: 0;
+    padding: 0px 60px;
+  }
+}
+
+
+/**************  MENU RESPONSIVE (DRAWER)  ************/
+
+// Voir drawer.scss
+
+
+/**************  MEDIA QUERIES  ************/
+
+@media (max-width: 767px) {
+  #page-site-index {
+    // Logo de la page d'accueil
+    .logo {
+      max-height: 25px;
+    }
+      // Couleur du bouton des langues
+      .langmenu .langbutton {
+          display: none;
+    }
+  }
+}
