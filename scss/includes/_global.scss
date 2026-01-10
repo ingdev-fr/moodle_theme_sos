@@ -353,11 +353,15 @@ $linear-background: linear-gradient(90deg, $secondary-50 20%, $secondary-100 45%
 $linear-front: linear-gradient(135deg, $primary-950 25%, $primary-950 85%);
 $linear-title: linear-gradient(90deg, $primary-50, $lime-200);
 $linear-section: linear-gradient(90deg, $primary, $primary);
-$linear-login: radial-gradient($primary-800, $primary-300);
+$linear-login: linear-gradient(90deg, $white, $white);
 $linear-gradient: linear-gradient(90deg, $primary-500, $primary-950);
 
 // Box-shadow 
 $box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.2);
+
+// Couleurs de texte spécifiques
+$login-text-color : $gray-950;
+$login-lien-color : $cyan-700;
 
 
 /************************************************* HTML ADDITIONNEL MOODLE **********************************************************************/
@@ -684,17 +688,6 @@ p {
 
 // Bouton des cookies sur page de login
 .btn[data-modal-title-str='["cookiesenabled", "core"]'] {
-    background-color: transparent !important;
-    border-color: $gray-50 !important;
-    color: $gray-50 !important;
-    &:hover {
-        background-color: $primary-950 !important;
-    }
-    &:focus {
-        background-color: $primary-950 !important;
-        outline: 0;
-        box-shadow: 0 0 0 .25rem rgba(44, 60, 105, 0.75);
-    }
 }
 
 

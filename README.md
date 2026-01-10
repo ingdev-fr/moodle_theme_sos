@@ -12,7 +12,7 @@ Install theme_sos like any other plugin to folder
 - Changer les logos et favicons dans Boost_union
 - Récupérer les paramètres de Boost_union
 - Récupérer les images du dossier pix
-- le fichier _variables.scss est personnalisable sans impacter les autres fichiers
+- le fichier _global.scss est personnalisable sans impacter les autres fichiers
 - Paramétrer les couleurs des tuiles et le style de tuile dans les paramètres du plugin tiles : 
     - Noir : #000000
     - Gris foncé : #0f172a

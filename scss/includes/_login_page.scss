@@ -9,7 +9,7 @@
         background-position: center;
         background-repeat: no-repeat;
         margin-top: 0 !important;
-        color: $gray-50;
+        color: $login-text-color;
         // Main
         #page-content div[role=main] {
             padding-left: 0px !important;
@@ -17,7 +17,7 @@
             padding-bottom: 0px !important;
         }
         & p {
-            color: $gray-50 !important;
+            color: $login-text-color !important;
         }
         #notice p {
             color: $primary-950 !important;
@@ -41,22 +41,22 @@
         .form-control-static,
         .fdescription,
         form h3  {
-            color: $gray-50 !important;
+            color: $login-text-color !important;
         }
 
         .login-instructions {
-            color: $gray-50;
+            color: $login-text-color;
         }
 
         // Changement de couleur du lien d'oubli de mot de passe 
         .login-form-forgotpassword a {
-            color: $lime-100;
+            color: $login-lien-color;
         }
 
         // Changement de couleur du menu des langues du login container 
         .login-languagemenu .dropdown {
             a {
-                color: $gray-50;
+                color: $login-text-color;
             }
         }
 
@@ -67,7 +67,7 @@
 
         // Changement de couleur du titre du login
         .login-heading {
-            color: $gray-50;
+            color: $login-text-color;
         }
         .invalid-feedback {
             color: $red-400;
@@ -76,7 +76,7 @@
 
 #page-login-signup #page {
     & a:not(.btn-icon) {
-        color: $lime-100;
+        color: $login-lien-color;
     }
     #notice {
         padding: 10px 20px !important;
