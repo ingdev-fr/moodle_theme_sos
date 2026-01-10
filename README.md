@@ -1,6 +1,11 @@
 moodle-theme_theme_sos
 ==============================
 
+Requirements
+------------
+
+Trainterra_colors needs Boost Union and min Moodle 5.1 release.
+
 
 Installation
 ------------
@@ -12,6 +17,7 @@ Install theme_sos like any other plugin to folder
 - Changer les logos et favicons dans Boost_union
 - Récupérer les paramètres de Boost_union
 - Récupérer les images du dossier pix
+- Adapter les images "screenshot" et "image-header" dans pix/
 - le fichier _global.scss est personnalisable sans impacter les autres fichiers
 - Paramétrer les couleurs des tuiles et le style de tuile dans les paramètres du plugin tiles : 
     - Noir : #000000
@@ -57,8 +63,7 @@ Damien Will Trainterra
 Credits
 -------
 
-This boilerplate is heavily inspired by the work of Daniel Poggenpohl from FernUniversität in Hagen who was the first to create a boost_union boilerplate.
-
+Damien Will from Trainterra who was the first to create a Trainterra_colors boilerplate.
 
 
 Copyright
@@ -67,4 +72,3 @@ Copyright
 The copyright of this boilerplate is held by\
 Damien Will Trainterra
 
-Individual copyrights of individual developers are tracked in PHPDoc comments and Git commits.
