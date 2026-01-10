@@ -85,14 +85,13 @@
 @media (max-width: 1199px) {
     #page-login-index #page,
     #page-login-signup #page  {
-        background-image: url([[pix:theme|login-page-tab]]) !important;
+
     }
 }
 
 // Stylage du container du logo (quand logo couleur sombre)
 .login-logo {
     padding: 10px;
-    background: $gray-50;
     border-radius: 5px;
     & img {
         max-height: 52px;
@@ -102,7 +101,7 @@
 // STyle pour tablettes
 @media (max-width: 1199px) {
     #page-login-forgot_password #page {
-        background-image: url([[pix:theme|login-page-tab]]) !important;
+       
     }
 }
 
