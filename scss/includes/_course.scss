@@ -16,8 +16,11 @@
 #page-enrol-index {
     .coursebox .content .courseimage img {
         max-width: 400px !important;
-        max-height: 200px !important;
+        max-height: none !important;
+        height: 100% !important;
+        object-fit: cover;
         border-radius: 8px !important;
+        margin-right: 20px;
     }
 }
 
@@ -57,6 +60,9 @@
         .coursebox .content .courseimage img {
             object-fit: cover;
             width: 100%;
+            max-width: none !important;
+            max-height: 300px !important;
+            margin-bottom: 20px !important;
         }
     } 
 }
