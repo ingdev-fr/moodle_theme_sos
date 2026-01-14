@@ -437,6 +437,7 @@ p {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
+    height: 140px !important;
 
     // Boutons d'actions du haut de page 
     & .header-action button, 
@@ -692,6 +693,12 @@ p {
 
 
 /************************************************* MEDIAS ***********************************************************************/
+
+@media (min-width: 2100px) {
+    #page-header {
+        height: 180px !important;
+    }
+}
 
 @media (max-width: 991px) {
     #page-content {
