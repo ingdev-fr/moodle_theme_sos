@@ -1,14 +1,52 @@
 
-.path-mod-quiz {
-    .description, 
+#page-mod-quiz-attempt,
+#page-mod-quiz-review 
+ {
+    // Les questions "informations"
     .informationitem {
-        .formulation {
-            background-color: transparent;
-            border: none;
-        }
-        p {
-            font-size : 1.2rem;
-            font-weight: 600;
+        .info {
+            display: none;
         }
     }
+    //Toutes les questions sauf les informations
+    .que:not(.informationitem) {
+        border-radius: 8px;
+        border: 1px solid $primary-700;
+        align-items: normal !important;
+        max-width: 1200px;
+        .info {
+            border-radius: 8px 0 0 8px !important;
+            border: none !important;
+            border-right: 1px solid $primary-700 !important;
+        }
+        .qtext p {
+            font-size: 1.1rem;
+            color: $primary;
+            margin-bottom: 20px;
+        }
+        .ablock {
+            tr, td, tbody {
+                border: none !important;
+            }
+            td {
+                padding-bottom: 8px !important;
+            }
+        }
+    }
+    // Les cases à remplir du texte à trous
+    .que.ddwtos {
+            span.drop {
+                border-radius: 8px;
+                margin-bottom: 10px;
+            }
+            .draghome {
+                border-radius: 8px;
+            }
+        }
+    // Le contenu des questions
+    .content .formulation {
+        background-color: transparent;
+        border-color: transparent;
+    }
 }
+
