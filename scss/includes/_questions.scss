@@ -48,5 +48,58 @@
         background-color: transparent;
         border-color: transparent;
     }
+    // Les réponses correctes, partiellment correctes, fausses sur la page de revue du quiz 
+    .correct {
+        .outcome {
+            color: $green-700;
+            border-color: $sky-300;
+            background-color: $sky-50;
+            margin-right: 30px;
+            margin-left: 15px;
+        }
+    }
+    .incorrect {
+        .outcome {
+            color: $red-700;
+            border-color: $red-300;
+            background-color: $sky-50;
+            margin-right: 30px;
+            margin-left: 15px;
+        }
+    }
+    .partiallycorrect {
+        .outcome {
+            color: $amber-700;
+            border-color: $amber-300;
+            background-color: $sky-50;
+            margin-right: 30px;
+            margin-left: 15px;
+        }
+    } 
+    .rightanswer {
+        color: $gray-950;
+    }
 }
 
+/************************************************* MEDIAS ***********************************************************************/
+
+@media (max-width: 767px) {
+    #page-mod-quiz-review {
+        // Les réponses correctes, partiellment correctes, fausses sur la page de revue du quiz 
+        .correct {
+            .outcome {
+                margin-right: 15px;
+            }
+        }
+        .incorrect {
+            .outcome {
+                margin-right: 15px;
+            }
+        }
+        .partiallycorrect {
+            .outcome {
+                margin-right: 15px;
+            }
+        } 
+    }
+}
