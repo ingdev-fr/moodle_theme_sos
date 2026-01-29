@@ -90,6 +90,16 @@
   padding-top: 8px !important;
 }
 
+// Le bouton des messages dans le header de page
+#page-header .header-button-group a {
+  color: $pink-600 !important;
+
+}
+
+.path-user .editprofile a {
+  background: $pink-600 !important;
+}
+
 /**************  MEDIA QUERIES  ************/
 
 @media (max-width: 1199px) {
