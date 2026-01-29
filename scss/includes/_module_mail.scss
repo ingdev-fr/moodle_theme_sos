@@ -59,9 +59,34 @@
     background-color: var(--light, var(--bs-gray-100));
 }
 
-.local-mail .dropdown-item:not(:focus):hover {
-    color: inherit;
-    background-color: #f5f8ff;
+.local-mail-menu-item:hover {
+    background-color: $primary !important;
+    color: white !important;
+}
+.local-mail-menu-item:active {
+    background-color: $primary !important;
+    color: white !important;
+    box-shadow: none !important;
+}
+.local-mail-menu-item:focus {
+    background-color: $primary !important;
+    color: white !important;
+    box-shadow: none !important;
+}
+
+.dropdown-item:hover {
+    background-color: $primary !important;
+    color: white !important;
+}
+.dropdown--item:active {
+    background-color: $primary !important;
+    color: white !important;
+    box-shadow: none !important;
+}
+.dropdown--item:focus {
+    background-color: $primary !important;
+    color: white !important;
+    box-shadow: none !important;
 }
 
 
